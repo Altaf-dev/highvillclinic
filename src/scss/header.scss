@@ -1,0 +1,296 @@
+@import "color";
+
+.header {
+  padding: 15px 0;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    &.active {
+      .logo-color {
+        fill: $white;
+      }
+    }
+  }
+
+  .logo-img {
+    width: 141px;
+    height: 48px;
+    margin-right: 20px;
+    @media screen and (max-width: 1199px) {
+      width: 107px;
+      height: 36px;
+      margin-right: 10px;
+    }
+  }
+
+  .logo-color {
+    transition: .3s;
+  }
+
+  .logo-text {
+    display: block;
+    max-width: 85px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 147%;
+    color: $teal-dark;
+    @media screen and (max-width: 1199px) {
+      font-size: 1rem;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 325px;
+    margin-left: 56px;
+    margin-right: auto;
+    @media screen and (max-width: 1199px) {
+      max-width: 245px;
+      margin-left: 45px;
+    }
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      top: -15px;
+      left: -10px;
+      align-items: center;
+      justify-content: normal;
+      //justify-content: center;
+      max-width: none;
+      width: calc(100% + 20px);
+      height: 0;
+      margin: 0;
+      background-color: $teal-dark;
+      overflow: hidden;
+      transition: .3s;
+      &.active {
+        height: 100vh;
+      }
+    }
+  }
+
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &:first-child {
+      margin-bottom: 9px;
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 7px;
+      }
+      @media screen and (max-width: 767px) {
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      &:first-child {
+        margin-top: 124px;
+      }
+    }
+  }
+
+  .list-item {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 95, 93, .1);
+      @media screen and (max-width: 767px) {
+        background-color: rgba(255, 255, 255, .1);
+      }
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .item-link {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 155%;
+    color: $teal-dark;
+    @media screen and (max-width: 1199px) {
+      font-size: 1.1rem;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1.8rem;
+      color: $white;
+    }
+  }
+
+  .mobile-contact {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 47px;
+    }
+  }
+
+  .contact-item {
+    padding-left: 32px;
+  }
+
+  .whatsapp {
+    position: relative;
+    display: block;
+    margin-bottom: 31px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 155%;
+    color: $white;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -32px;
+      transform: translate(0, -50%);
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/white-whatsapp.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .email {
+    position: relative;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 155%;
+    color: $white;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -32px;
+      transform: translate(0, -50%);
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/white-email.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: 36px;
+    }
+  }
+
+  .contacts-phone {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 155%;
+    color: $teal-dark;
+    @media screen and (max-width: 1199px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .contacts-modal {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 155%;
+    color: $teal-dark;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 95, 93, .1);
+    }
+    @media screen and (max-width: 1199px) {
+      font-size: 1.1rem;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      z-index: 5;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: $teal-dark;
+      transition: .3s;
+    }
+    &:before {
+      top: 5px;
+    }
+    &:after {
+      bottom: 5px;
+    }
+    &.active {
+      &:before,
+      &:after {
+        width: 1px;
+        height: 14px;
+        border-radius: 2px;
+        background-color: $white;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+      .btn-dot {
+        display: none;
+      }
+    }
+  }
+
+  .btn-dot {
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $teal-dark;
+    transition: .3s;
+  }
+}
