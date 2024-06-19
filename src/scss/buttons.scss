@@ -1,1 +1,16 @@
 @import "color";
+
+button.main-btn {
+  padding: 16px 24px;
+  border-radius: 5px;
+  background: $btn-teal;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 24px;
+  color: $white;
+  transition: .3s;
+  &:hover {
+    background: $teal-lighter;
+    color: $teal-dark;
+  }
+}

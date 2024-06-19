@@ -7,7 +7,29 @@ description: "Какое то описание для страницы, для �
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
 <main>
-
+    <section class="main" id="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__content">
+                    <h1 class="title">Современная имплантация зубов в Астане</h1>
+                    <span class="main__subtitle">Имплантация без боли - улыбнитесь с новыми технологиями</span>
+                </div>
+                <button class="main-btn main__btn">Узнать подробнее</button>
+                <div class="main__advantage">
+                    <div class="advantage-item">
+                        <img src="img/doctor-icon.svg" alt="icon" class="item-icon">
+                        <span class="item-title">Опытные врачи</span>
+                        <span class="item-desc">Практикующие хирурги, с опытом более 7 лет</span>
+                    </div>
+                    <div class="advantage-item">
+                        <img src="img/toothPc-icon.svg" alt="icon" class="item-icon">
+                        <span class="item-title"><span class="hide">Новейший </span>3D сканер</span>
+                        <span class="item-desc">и компьютерное моделирование<span class="hide">, для идеального протезирования;</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <!--footer-->

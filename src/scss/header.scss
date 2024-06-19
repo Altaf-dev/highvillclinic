@@ -2,6 +2,10 @@
 
 .header {
   padding: 15px 0;
+  background-color: rgba(0, 95, 93, .03);
+  @media screen and (max-width: 767px) {
+    background-color: $white;
+  }
 
   &__wrapper {
     position: relative;
@@ -13,7 +17,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    z-index: 5;
+    z-index: 10;
     &.active {
       .logo-color {
         fill: $white;
@@ -67,6 +71,7 @@
       position: absolute;
       top: -15px;
       left: -10px;
+      z-index: 5;
       align-items: center;
       justify-content: normal;
       //justify-content: center;
@@ -247,7 +252,7 @@
     height: 24px;
     @media screen and (max-width: 767px) {
       display: flex;
-      z-index: 5;
+      z-index: 10;
     }
     &:before,
     &:after {
