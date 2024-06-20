@@ -2,15 +2,14 @@
 
 .main {
   padding-top: 40px;
-  padding-bottom: 50px;
   background-color: rgba(0, 95, 93, .03);
   @media screen and (max-width: 1199px) {
     padding-top: 25px;
-    padding-bottom: 30px;
   }
   @media screen and (max-width: 767px) {
     padding-top: 10px;
     background-color: $white;
+    overflow: hidden;
   }
 
   &__wrapper {
@@ -72,6 +71,11 @@
   &__advantage {
     display: flex;
     align-items: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
     @media screen and (max-width: 767px) {
       justify-content: space-between;
       max-width: 320px;
@@ -145,4 +149,121 @@
       text-align: center;
     }
   }
+
+  &__background {
+    position: absolute;
+    bottom: 0;
+    right: -150px;
+    width: 749px;
+    height: 420px;
+    z-index: -5;
+    @media screen and (max-width: 1199px) {
+      width: 582px;
+      height: 365px;
+    }
+    @media screen and (max-width: 960px) {
+      right: -295px;
+    }
+    @media screen and (max-width: 767px) {
+      position: relative;
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 0;
+      width: 400px;
+      height: 215px;
+      margin-top: 195px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: -170px;
+    left: -30px;
+    z-index: -5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 235px;
+    height: 235px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: $teal-light;
+    @media screen and (max-width: 1199px) {
+      top: -150px;
+      left: -5px;
+      width: 200px;
+      height: 200px;
+    }
+    @media screen and (max-width: 767px) {
+      left: 50%;
+      transform: translate(-50%, 0);
+      justify-content: normal;
+      width: 435px;
+      height: 435px;
+      padding: 25px;
+      background-color: $teal-lighter;
+    }
+  }
+
+  .icon-wrapper {
+
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-left: -6px;
+    @media screen and (max-width: 1199px) {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  .text-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .decor-num {
+    margin-right: 8px;
+    font-size: 9.4rem;
+    font-weight: 400;
+    color: $white;
+    @media screen and (max-width: 1199px) {
+      font-size: 7.8rem;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 10.9rem;
+      color: $teal-dark;
+    }
+  }
+
+  .decor-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 147%;
+    color: $white;
+    @media screen and (max-width: 1199px) {
+      font-size: 1rem;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1.4rem;
+      color: $teal-dark;
+    }
+  }
+
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.advantage {
+  height: 1000px;
+  background-color: $white;
 }
