@@ -453,7 +453,7 @@
 
   .form-decor {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     right: 165px;
     z-index: 1;
     @media screen and (max-width: 1199px) {
@@ -465,10 +465,20 @@
     @media screen and (max-width: 767px) {
       position: relative;
       right: auto;
-      left: -25px;
-      bottom: -25px;
+      left: 50%;
+      bottom: -30px;
+      transform: translate(-50%, 0);
+      width: 315px;
+
+    }
+    @media screen and (max-width: 425px) {
+      left: auto;
+      right: 40px;
+      transform: none;
       display: flex;
-      max-width: 315px;
+    }
+    @media screen and (max-width: 350px) {
+      right: 75px;
     }
   }
 
@@ -481,7 +491,7 @@
       height: 310px;
     }
     @media screen and (max-width: 767px) {
-      width: 190px;
+      width: 220px;
       height: 204px;
     }
   }
