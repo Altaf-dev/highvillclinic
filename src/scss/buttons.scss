@@ -14,3 +14,20 @@ button.main-btn {
     color: $teal-dark;
   }
 }
+
+button.form-btn {
+  padding: 0 16px;
+  height: 42px;
+  border-radius: 7px;
+  background-color: $teal-light;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 17.92px;
+  color: $white;
+  @media screen and (max-width: 767px) {
+    max-width: 320px;
+    width: 100%;
+    height: 56px;
+    padding-right: 16px;
+  }
+}

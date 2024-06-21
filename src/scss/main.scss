@@ -270,6 +270,9 @@
     padding-top: 70px;
     padding-bottom: 35px;
   }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 30px;
+  }
   .title {
     @media screen and (max-width: 767px) {
       text-align: center;
@@ -354,5 +357,49 @@
     @media screen and (max-width: 1199px) {
       font-size: 1.6rem;
     }
+  }
+
+  &__form {
+    padding: 40px 45px 50px;
+    border-radius: 10px;
+    background-color: $teal-dark;
+    @media screen and (max-width: 1199px) {
+      border-radius: 5px;
+    }
+    @media screen and (max-width: 767px) {
+      border-radius: 8px;
+    }
+  }
+
+  .form-title {
+
+  }
+
+  .form-subtitle {
+
+  }
+
+  .form-body {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .form-input {
+    margin-right: 10px;
+    @media screen and (max-width: 1199px) {
+      margin-right: 8px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .form-btn {
+
   }
 }
