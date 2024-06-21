@@ -73,18 +73,27 @@ description: "Какое то описание для страницы, для �
                 </div>
             </div>
             <div class="advantage__form">
-                <span class="form-title">Получите бесплатную консультацию</span>
-                <span class="form-subtitle">Оставьте заявку и мы перезвоним вам в течение 10 минут</span>
-                <form action="./php/mail.php"
-                      id="orderModal"
-                      method="post"
-                      accept-charset="utf-8"
-                      enctype="multipart/form-data"
-                      class="form-body">
-                    <input type="text" class="form-input" placeholder="Ваше имя">
-                    <input type="text" class="form-input" placeholder="+7 (000) 000 00-00">
-                    <button type="submit" class="form-btn">Получить консультацию</button>
-                </form>
+                <div class="form-wrapper">
+                    <span class="form-title">Получите бесплатную консультацию</span>
+                    <span class="form-subtitle">Оставьте заявку и мы перезвоним вам в течение 10 минут</span>
+                    <form action="./php/mail.php"
+                          id="orderModal"
+                          method="post"
+                          accept-charset="utf-8"
+                          enctype="multipart/form-data"
+                          class="form-body">
+                        <input type="text" class="form-input" placeholder="Ваше имя">
+                        <input type="text" class="form-input" placeholder="+7 (000) 000 00-00">
+                        <button type="submit" class="form-btn">Получить консультацию</button>
+                    </form>
+                </div>
+                <div class="form-decor">
+                    <img src="img/doctorMan.png" alt="img" class="decor-img">
+                    <div class="decor-text">
+                        <span class="decor-title">Иван Семёнович</span>
+                        <span class="decor-subtitle">Стоматолог-имплантолог <br> высшей категории. <br> Стаж работы 14 лет</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

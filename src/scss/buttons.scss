@@ -17,13 +17,24 @@ button.main-btn {
 
 button.form-btn {
   padding: 0 16px;
-  height: 42px;
+  max-width: 230px;
+  width: 100%;
+  height: 56px;
   border-radius: 7px;
   background-color: $teal-light;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 17.92px;
   color: $white;
+  &:hover {
+    background: $teal-lighter;
+    color: $teal-dark;
+  }
+  @media screen and (max-width: 1199px) {
+    max-width: 196px;
+    height: 42px;
+  }
+
   @media screen and (max-width: 767px) {
     max-width: 320px;
     width: 100%;
