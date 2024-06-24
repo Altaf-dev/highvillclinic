@@ -1,5 +1,24 @@
 <footer class="footer">
 
+    <div class="modal-bg closeModal"></div>
+    <div class="modal modal-services">
+        <button class="modal-close closeModal"></button>
+        <div class="modal__body">
+            <h3 class="modal-title"></h3>
+            <span class="modal-desc"></span>
+            <form action="./php/mail.php"
+                  id="orderModal"
+                  method="post"
+                  accept-charset="utf-8"
+                  enctype="multipart/form-data"
+                  class="form-body">
+                <div class="input-wrapper name-input"><input type="text" class="form-input" placeholder="Ваше имя"></div>
+                <div class="input-wrapper phone-input"><input type="text" class="form-input" placeholder="+7 (000) 000 00-00"></div>
+                <button type="submit" class="modal-btn main-btn">Узнать стоимость</button>
+            </form>
+        </div>
+    </div>
+
 </footer>
 <script src="uploads/jquery3.4.1.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
