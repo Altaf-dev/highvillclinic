@@ -10,6 +10,8 @@ const modalItems = document.querySelectorAll('.modal')
 const MODAL_TITLE = document.querySelector('.modal-title')
 const MODAl_DESC = document.querySelector('.modal-desc')
 
+const QUESTIONS_TAB = document.querySelectorAll('.questions-tab')
+
 
 //Открытие мобильного меню
 MENU_BTN.addEventListener('click' , () => {
@@ -111,3 +113,17 @@ function sliderInit() {
 }
 
 sliderInit()
+
+
+QUESTIONS_TAB.forEach((item) => {
+    item.addEventListener('click', () => {
+        if (item.classList.contains('active')) {
+            item.classList.remove('active')
+        } else {
+            // QUESTIONS_TAB.forEach((item) => {
+            //     item.classList.remove('active')
+            // })
+            item.classList.add('active')
+        }
+    })
+})
