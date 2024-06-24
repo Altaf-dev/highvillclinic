@@ -75,3 +75,39 @@ openModal.forEach((item) => {
     })
 })
 
+//Инициализация слайдера
+
+function sliderInit() {
+    const teamSlider = new Swiper('.team__slider', {
+        loop: true,
+        speed: 400,
+        slidesPerView: 3,
+        centeredSlides: true,
+        pagination: {
+            el: '.team-pagination',
+            type: 'bullets',
+        },
+
+        navigation: {
+            nextEl: '.team-button-prev',
+            prevEl: '.team-button-next',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: "auto",
+                centeredSlides: false,
+                spaceBetween: 20,
+            },
+            767: {
+                centeredSlides: true,
+                spaceBetween: 20,
+            },
+            1199: {
+                spaceBetween: 40,
+            },
+        },
+
+    })
+}
+
+sliderInit()
