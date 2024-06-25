@@ -110,6 +110,31 @@ function sliderInit() {
         },
 
     })
+    const casesSlider = new Swiper('.cases__slider', {
+        loop: true,
+        speed: 400,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        pagination: {
+            el: '.cases-pagination',
+            type: 'bullets',
+        },
+
+        navigation: {
+            nextEl: '.cases-button-prev',
+            prevEl: '.cases-button-next',
+        },
+        breakpoints: {
+            320: {
+                spaceBetween: 20,
+            },
+            960: {
+                centeredSlides: true,
+                spaceBetween: 40,
+            },
+        },
+
+    })
 }
 
 sliderInit()

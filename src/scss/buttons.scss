@@ -42,3 +42,55 @@ button.form-btn {
     padding-right: 16px;
   }
 }
+
+.button-prev,
+.button-next {
+  position: absolute;
+  top: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid $teal-light;
+  cursor: pointer;
+  z-index: 10;
+  @media screen and (max-width: 1199px) {
+    top: 129px;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.button-prev {
+  left: 0;
+}
+
+.button-next {
+  right: 0;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $gray-lighter;
+}
+
+.swiper-pagination-bullet-active {
+  width: 32px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: $teal-light;
+}
