@@ -1745,12 +1745,13 @@
 
   &__wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   &__column {
     display: flex;
     flex-direction: column;
-    max-width: 380px;
+    width: 33%;
   }
 
   .column-text {
@@ -1817,8 +1818,7 @@
   }
 
   &__map {
-    max-width: 750px;
-    width: 100%;
+    width: 65%;
     border-radius: 10px;
     overflow: hidden;
   }
