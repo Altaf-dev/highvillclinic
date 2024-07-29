@@ -9,6 +9,7 @@ const openModal = document.querySelectorAll('.openModal')
 const modalItems = document.querySelectorAll('.modal')
 const MODAL_TITLE = document.querySelector('.modal-title')
 const MODAl_DESC = document.querySelector('.modal-desc')
+const MODAL_SUM = document.querySelector('.modal-sum')
 
 const QUESTIONS_TAB = document.querySelectorAll('.questions-tab')
 
@@ -65,12 +66,14 @@ openModal.forEach((item) => {
     item.addEventListener('click', () => {
         let title = item.getAttribute('data-title')
         let desc = item.getAttribute('data-desc')
+        let sum = item.getAttribute('data-sum')
         modalItems.forEach((modals) => {
             if (modals.classList.contains(item.getAttribute('data-modal'))) {
                 MODAL_BG.classList.add('active')
                 modals.classList.add('active')
                 MODAL_TITLE.innerText = title
                 MODAl_DESC.innerText = desc
+                MODAL_SUM.innerText = sum
                 scrollStop()
             }
         })

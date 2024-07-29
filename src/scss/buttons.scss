@@ -56,6 +56,13 @@ button.form-btn {
   border: 1.5px solid $teal-light;
   cursor: pointer;
   z-index: 10;
+  transition: .3s;
+  &:hover {
+    border: 1.5px solid $teal-dark;
+    path {
+      stroke: $teal-dark;
+    }
+  }
   @media screen and (max-width: 1199px) {
     top: 129px;
   }

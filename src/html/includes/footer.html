@@ -1,4 +1,40 @@
 <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a href="#" class="footer__logo">
+                <img src="img/logo.svg" alt="logo" class="logo-img">
+                <span class="logo-text">Стоматологический центр в Астане</span>
+            </a>
+            <div class="footer__menu">
+                <div class="footer__doc">
+                    <span class="doc-title">Документация</span>
+                    <a href="img/cert1.jpg" data-fancybox="cert" class="doc-link">Сертификаты</a>
+                    <a href="#" class="doc-link">Реквизиты</a>
+                    <a href="img/cert1.jpg" data-fancybox="license" class="doc-link">Лицензии</a>
+                </div>
+                <div class="footer__nav">
+                    <span class="nav-title">Навигация</span>
+                    <a href="#consultation" class="nav-link">Консультация</a>
+                    <a href="#advantage" class="nav-link">О центре</a>
+                    <a href="#" class="nav-link">FAQ</a>
+                </div>
+                <a href="https://diple.kz/" class="diple">Сделано в DIPLE</a>
+            </div>
+            <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </div>
+    </div>
+
+<!--    Галерея сертификатов-->
+    <ul hidden>
+        <li><a data-fancybox="cert" href="img/cert2.jpg"></a></li>
+        <li><a data-fancybox="cert" href="img/cert3.jpg"></a></li>
+    </ul>
+
+<!--    Галерея лицензий-->
+    <ul hidden>
+        <li><a data-fancybox="license" href="img/cert2.jpg"></a></li>
+        <li><a data-fancybox="license" href="img/cert3.jpg"></a></li>
+    </ul>
 
     <div class="modal-bg closeModal"></div>
     <div class="modal modal-services">
@@ -6,6 +42,7 @@
         <div class="modal__body">
             <h3 class="modal-title"></h3>
             <span class="modal-desc"></span>
+            <span class="modal-sum"></span>
             <form action="./php/mail.php"
                   id="servicesModal"
                   method="post"
@@ -18,6 +55,54 @@
             </form>
         </div>
     </div>
+    <div class="modal modal-reception">
+        <button class="modal-close closeModal"></button>
+        <div class="modal__body">
+            <h3 class="modal-title">Запись на прием</h3>
+            <span class="modal-desc">Оставьте заявку и мы ответим на них через 20 минут</span>
+            <form action="./php/mail.php"
+                  id="receptionModal"
+                  method="post"
+                  accept-charset="utf-8"
+                  enctype="multipart/form-data"
+                  class="form-body">
+                <div class="input-wrapper name-input"><input type="text" class="form-input" placeholder="Ваше имя"></div>
+                <div class="input-wrapper phone-input"><input type="text" class="form-input" placeholder="+7 (000) 000 00-00"></div>
+                <button type="submit" class="modal-btn main-btn">Записаться на прием</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal modal-questions">
+        <button class="modal-close closeModal"></button>
+        <div class="modal__body">
+            <h3 class="modal-title">Остались вопросы?</h3>
+            <span class="modal-desc">Оставьте заявку и мы ответим на них через 20 минут</span>
+            <form action="./php/mail.php"
+                  id="questionsModal"
+                  method="post"
+                  accept-charset="utf-8"
+                  enctype="multipart/form-data"
+                  class="form-body">
+                <div class="input-wrapper name-input"><input type="text" class="form-input" placeholder="Ваше имя"></div>
+                <div class="input-wrapper phone-input"><input type="text" class="form-input" placeholder="+7 (000) 000 00-00"></div>
+                <button type="submit" class="modal-btn main-btn">Записаться на прием</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal modal-thanks">
+        <button class="modal-close closeModal"></button>
+        <div class="modal__body">
+            <svg class="modal-icon" width="68" height="67" viewBox="0 0 68 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="31.5" cy="35.5" r="27.5" fill="#39A59F"/>
+                <circle cx="34" cy="33" r="31" stroke="#005F5D" stroke-width="2"/>
+                <path d="M42.5 28.25L31.875 39L25.5 32.55" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 class="modal-title">Спасибо за обращение!</h3>
+            <span class="modal-desc">Ваша заявка принята, мы свяжемся с Вами в течении 20 минут</span>
+        </div>
+    </div>
+
+
 
 </footer>
 <script src="uploads/jquery3.4.1.js"></script>

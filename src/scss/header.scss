@@ -70,13 +70,13 @@
     @media screen and (max-width: 767px) {
       position: absolute;
       top: -15px;
-      left: -10px;
+      left: -15px;
       z-index: 5;
       align-items: center;
       justify-content: normal;
       //justify-content: center;
       max-width: none;
-      width: calc(100% + 20px);
+      width: calc(100% + 30px);
       height: 0;
       margin: 0;
       background-color: $teal-dark;
@@ -134,6 +134,10 @@
     font-weight: 500;
     line-height: 155%;
     color: $teal-dark;
+    transition: .3s;
+    &:hover {
+      color: $black;
+    }
     @media screen and (max-width: 1199px) {
       font-size: 1.1rem;
     }
@@ -143,21 +147,43 @@
     }
   }
 
+  .mobile-social {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      margin: 34px 0;
+    }
+  }
+
+  .telega {
+    margin-right: 22px;
+  }
+  .whatsapp,
+  .telega {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 155%;
+    color: $white;
+  }
+
   .mobile-contact {
     display: none;
     @media screen and (max-width: 767px) {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 47px;
     }
   }
 
   .contact-item {
     padding-left: 32px;
+    @media screen and (max-width: 960px) {
+      padding-left: 0;
+    }
   }
 
-  .whatsapp {
+  .phone {
     position: relative;
     display: block;
     margin-bottom: 31px;
@@ -165,17 +191,8 @@
     font-weight: 600;
     line-height: 155%;
     color: $white;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: -32px;
-      transform: translate(0, -50%);
-      width: 24px;
-      height: 24px;
-      background-image: url("../img/white-whatsapp.svg");
-      background-position: center;
-      background-repeat: no-repeat;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
     }
   }
 
@@ -186,18 +203,18 @@
     font-weight: 500;
     line-height: 155%;
     color: $white;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: -32px;
-      transform: translate(0, -50%);
-      width: 24px;
-      height: 24px;
-      background-image: url("../img/white-email.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+    //&:before {
+    //  content: '';
+    //  position: absolute;
+    //  top: 50%;
+    //  left: -32px;
+    //  transform: translate(0, -50%);
+    //  width: 24px;
+    //  height: 24px;
+    //  background-image: url("../img/white-email.svg");
+    //  background-position: center;
+    //  background-repeat: no-repeat;
+    //}
   }
 
   &__contacts {
@@ -215,6 +232,10 @@
     font-weight: 600;
     line-height: 155%;
     color: $teal-dark;
+    transition: .3s;
+    &:hover {
+      color: $black;
+    }
     @media screen and (max-width: 1199px) {
       font-size: 1.4rem;
     }
@@ -226,6 +247,10 @@
     font-weight: 500;
     line-height: 155%;
     color: $teal-dark;
+    transition: .3s;
+    &:hover {
+      color: $black;
+    }
     &:after {
       content: '';
       position: absolute;
@@ -250,6 +275,15 @@
     justify-content: center;
     width: 24px;
     height: 24px;
+    &:hover {
+      .btn-dot {
+        background-color: $teal-light;
+      }
+      &:before,
+      &:after {
+        background-color: $teal-light;
+      }
+    }
     @media screen and (max-width: 767px) {
       display: flex;
       z-index: 10;
