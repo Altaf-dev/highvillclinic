@@ -203,18 +203,6 @@
     font-weight: 500;
     line-height: 155%;
     color: $white;
-    //&:before {
-    //  content: '';
-    //  position: absolute;
-    //  top: 50%;
-    //  left: -32px;
-    //  transform: translate(0, -50%);
-    //  width: 24px;
-    //  height: 24px;
-    //  background-image: url("../img/white-email.svg");
-    //  background-position: center;
-    //  background-repeat: no-repeat;
-    //}
   }
 
   &__contacts {
@@ -224,6 +212,9 @@
     @media screen and (max-width: 767px) {
       margin-left: auto;
       margin-right: 36px;
+    }
+    @media screen and (max-width: 320px) {
+      margin-right: 20px;
     }
   }
 
@@ -237,6 +228,9 @@
       color: $black;
     }
     @media screen and (max-width: 1199px) {
+      font-size: 1.6rem;
+    }
+    @media screen and (max-width: 320px) {
       font-size: 1.4rem;
     }
   }
